@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float length, breadth;
+    scanf("%f %f", &length, &breadth);
+
+    float perimeter = 2 * (length + breadth);
+    float area = length * breadth;
+
+    printf("Required length is %.2fm\n", perimeter);
+    printf("Required quantity of carpet is %.2fsqm\n", area);
+
+    return 0;
+}
