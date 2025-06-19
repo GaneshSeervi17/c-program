@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float P, R, T;
+    scanf("%f %f %f", &P, &T, &R);
+
+    float SI = (P * R * T) / 100.0;
+    float Total = P + SI;
+    float Discount = (2 * SI) / 100.0;
+    float Final_Amount = Total - Discount;
+
+    printf("%.2f\n%.2f\n%.2f\n%.2f\n", SI, Total, Discount, Final_Amount);
+
+    return 0;
+}
