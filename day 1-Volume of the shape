@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define PI 3.1416
+
+int main() {
+    float length, breadth, height, radius;
+
+    
+    scanf("%f", &length);
+    scanf("%f", &breadth);
+    scanf("%f", &height);
+    scanf("%f", &radius);
+
+    
+    float volumeCuboid = length * breadth * height;
+    float volumeCylinder = 3.141 * breadth * breadth * height;
+    float volumeCone = (1.0/3) * 3.141 * breadth * breadth * height;
+    float volumeSphere = (4.0/3) * PI * radius * radius * radius;
+
+    
+    printf("Volume of Cubiod=%.2f\n", volumeCuboid);
+    printf("Volume of Cylinder=%.2f\n", volumeCylinder);
+    printf("Volume of Cone=%.2f\n", volumeCone);
+    printf("Volume of Shpere=%.2f\n", volumeSphere);
+
+    return 0;
+}
