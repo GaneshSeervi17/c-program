@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define PI 3.1416
+
+int main() {
+    int a, l, w, r, s1, base, s2;
+    float peri_square, peri_rectangle, peri_circle, peri_triangle;
+
+    scanf("%d", &a);      
+    scanf("%d", &l);      
+    scanf("%d", &w);      
+    scanf("%d", &r);      
+    scanf("%d", &s1);     
+    scanf("%d", &base);   
+    scanf("%d", &s2);     
+
+    
+    peri_square = 4 * a;
+    peri_rectangle = 2 * (l + w);
+    peri_circle = 2 * 3.141 * r;
+    peri_triangle = s1 + base + s2;
+
+    
+    printf("Perimeter of Square:%.0f\n", peri_square);
+    printf("Perimeter of Rectangle:%.0f\n", peri_rectangle);
+    printf("Perimeter of Circle:%.2f\n", peri_circle);
+    printf("Perimeter of Triangle:%.0f\n", peri_triangle);
+
+    return 0;
+}
