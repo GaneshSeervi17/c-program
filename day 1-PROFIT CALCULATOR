@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int x;      
+    float a, b; 
+
+
+    scanf("%d %f %f", &x, &a, &b);
+
+    
+    float revenue = x * a;
+    float total_cost = x * b + 100;
+    float profit = revenue - total_cost;
+
+
+    printf("Number of copies sold:%d\n", x);
+    printf("Cost of each copy:%.0f\n", a);
+    printf("Cost spent by agency on each newspaper:%.0f\n", b);
+    printf("The profit obtained is Rs.%.2f\n", profit);
+
+    return 0;
+}
