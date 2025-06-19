@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define PI 3.1416
+
+int main() {
+    int squareSide, rectLength, rectBreadth;
+    float radius;
+    int triBase, triHeight;
+
+    
+    scanf("%d", &squareSide);     
+    scanf("%d", &rectLength);    
+    scanf("%d", &rectBreadth);    
+    scanf("%f", &radius);         
+    scanf("%d", &triBase);        
+    scanf("%d", &triHeight);      
+
+    
+    int areaSquare = squareSide * squareSide;
+    int areaRectangle = rectLength * rectBreadth;
+    float areaCircle = PI * radius * radius;
+    float areaTriangle = 0.5 * triBase * triHeight;
+
+    
+    printf("Area of Square=%d\n", areaSquare);
+    printf("Area of Rectangle=%d\n", areaRectangle);
+    printf("Area of Circle=%.2f\n", areaCircle);
+    printf("Area of Triangle=%.0f\n", areaTriangle);  
+    return 0;
+}
