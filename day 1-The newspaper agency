@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int w;         
+    float x, y;   
+    scanf("%d", &w);
+    scanf("%f", &x);
+    scanf("%f", &y);
+
+    
+    float profit = (w * (x - y)) - 100;
+
+   
+    printf("%.0f\n", profit);
+
+    return 0;
+}
