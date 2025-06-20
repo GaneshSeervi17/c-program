@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols, treeNum, col;
+
+
+    scanf("%d %d %d", &rows, &cols, &treeNum);
+
+
+    if (treeNum < 1 || treeNum > rows * cols) {
+        printf("Invalid tree number\n");
+        return 0;
+    }
+
+    col = (treeNum - 1) / rows + 1;
+
+
+    if (col == 2 || col == cols - 1) {
+        printf("It is a mango tree\n");
+    } else {
+        printf("It is not a mango tree\n");
+    }
+
+    return 0;
+}
