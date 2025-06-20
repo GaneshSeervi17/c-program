@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int sumOfDivisors(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0)
+            sum += i;
+    }
+    return sum;
+}
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    int sumA = sumOfDivisors(a);
+    int sumB = sumOfDivisors(b);
+
+    if ((float)sumA / a == (float)sumB / b)
+        printf("Friendly Pair\n");
+    else
+        printf("Not Friendly Pair\n");
+
+    return 0;
+}
