@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int n, term, i;
+
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        term = i * i + 5;
+        printf("%d ", term);
+    }
+
+    return 0;
+}
