@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+// Function to check if two paintings fit side-by-side or one above the other
+int canFit(int wallL, int wallB, int p1L, int p1B, int p2L, int p2B) {
+    // Try all orientations of the paintings and see if they fit
+    // Side by side
+    if ((p1L + p2L <= wallL && p1B <= wallB && p2B <= wallB) || 
+        (p1B + p2B <= wallB && p1L <= wallL && p2L <= wallL)) {
+        return 1;
+    }
+
+    // One next to other in rotated positions
+    if ((p1L + p2B <= wallL && p1B <= wallB && p2L <= wallB) ||
+        (p1B + p2L <= wallB && p1L <= wallL && p2B <= wallL)) {
+        return 1;
+    }
+
+    // One above the other
+    if ((p1B + p2B <= wallB && p1L <= wallL && p2L <= wallL) ||
+        (p1L + p2L <= wallL && p1B <= wallB && p2B <= wallB)) {
+        return 1;
+    }
+
+    return 0; // No fitting arrangement found
+}
+
+int main() {
+    int wallL, wallB;
+    int p1L, p1B;
+    int p2L, p2B;
+
+    // Input
+    scanf("%d %d", &wallL, &wallB);
+    scanf("%d %d", &p1L, &p1B);
+    scanf("%d %d", &p2L, &p2B);
+
+    // Check if paintings fit
+    if (canFit(wallL, wallB, p1L, p1B, p2L, p2B)) {
+        printf("Raj can fix both painting\n");
+    } else {
+        printf("Raj cannot fix both painting\n");
+    }
+
+    return 0;
+}
