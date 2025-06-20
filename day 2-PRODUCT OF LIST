@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, num;
+    float product = 1;
+
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        scanf("%d", &num);
+        product *= num;
+    }
+
+    printf("The Product of list value is %.2f\n", product);
+
+    return 0;
+}
